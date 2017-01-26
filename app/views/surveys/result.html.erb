@@ -1,2 +1,41 @@
-<h1>Surveys#result</h1>
-<p>Find me in app/views/surveys/result.html.erb</p>
+<div>
+	<%if flash[:success]%>
+	<p><%=flash[:success]%></p>
+	<% end %>
+
+	<table>
+		<tr>
+			<td>Submitted information</td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td><%= @result["name"]%></td>
+		</tr>
+
+		<tr>
+			<td>Location</td>
+			<td><%= @result["location"]%></td>
+		</tr>
+
+		<tr>
+			<td>Favorite Langauge</td>
+			<td><%= @result["langauge"]%></td>
+		</tr>
+
+		<tr>
+			<td>Comment</td>
+			<td><%= @result["comment"]%></td>
+		</tr>
+
+		<tr>
+			<td><%= button_to "Go Back", {:controller =>"surveys", :action => "index" }, :method=> :get %></td>
+		</tr>
+
+
+
+
+
+	</table>
+
+
+</div>
