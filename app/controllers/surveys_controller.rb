@@ -8,7 +8,7 @@ class SurveysController < ApplicationController
   def process_form
        session[:views]=session[:views]+1
        session[:result] =params[:survey]
-       flash[:success]= "Thank yu for submitting the form. You have now submitted the form #{session[:views]} time(s)"
+       flash[:success]= "Thank you for submitting the form. You have now submitted the form #{session[:views]} time(s)"
   	   redirect_to "/surveys/result"
   end
 
